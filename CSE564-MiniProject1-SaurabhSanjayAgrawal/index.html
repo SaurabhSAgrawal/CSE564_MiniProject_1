@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            CSE-564: MiniProject 1 
+        </title>  
+        <meta charset="utf-8">
+
+        <script src = "https://d3js.org/d3.v4.min.js"></script>
+        
+        <link rel="stylesheet" href="static/css/styles.css">
+
+    </head> 
+    
+    <body>
+        <div class="header">
+            <h2 style="margin-left: 400px;">Visualization - Mini Project #1</h2>
+        </div>
+
+        <div class="sidenav">
+            <div id="dataheading">
+                <h2 style="color: white; text-align: center;">USA Car Rental Data</h2>
+            </div>
+            <div id="menu">
+                <div id="toggle">
+                    <p style="color: white; display: inline-block; font-size: 17px;">Toggle for Scatterplot</p>
+                    <label class="switch">
+                        <input type="checkbox" id="yToggle" onchange="showRadioButtons()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div id="axisVar" style="color: white; padding: 10px;" hidden>
+                    <input type="radio" id="xAxisVar" name="AxisVar" value="xAxisVar">
+                    <label for="xAxisVar">X Axis</label> &nbsp; &nbsp;
+                    <input type="radio" id="yAxisVar" name="AxisVar" value="yAxisVar">
+                    <label for="yAxisVar">Y Axis</label><br>
+                </div>
+                <br/>
+                <div id="xAxisMenu">
+                    <label for="xAxis" style="color: white; text-align: center; font-size: 18px;">Choose a feature:</label>
+                    <br/>
+                    <div style="padding-top: 6px;">
+                        <select name="xFeatures" id="xAxisFeatures" onmouseup="plotGraphUtil(this.value)">
+                            <option value="state">State</option>
+                            <option value="vehicleType">Vehicle Type</option>
+                            <option value="fuelType">Fuel Type</option>
+                            <option value="vehicleBrand">Brand</option>
+                            <option value="year">Manufacture Year</option>
+                            <option value="dailyRate">Daily Rate</option>
+                            <option value="renterTripCount">No. of Trips</option>
+                            <option value="reviewCount">No. of Reviews</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+        </div>
+
+        <script src="static/js/chart.js">
+        </script> 
+    </body>
+
+</html>
